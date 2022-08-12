@@ -1,0 +1,18 @@
+/** abstracts **/
+
+@import "abstracts/variables";
+@import "element-plus/theme-chalk/dark/css-vars.css";
+
+/** base **/
+
+@import "base/base";
+@import "base/reset";
+
+/** el-fix **/
+
+@import "el-fix/index";
+
+#app {
+  width: 100%;
+  height: 100%;
+}

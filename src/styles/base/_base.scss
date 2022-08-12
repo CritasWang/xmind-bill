@@ -1,0 +1,190 @@
+@each $distance in $distance-list {
+  .m-#{$distance} {
+    margin: $distance + px !important;
+  }
+
+  .m-y-#{$distance} {
+    margin-top: $distance + px !important;
+    margin-bottom: $distance + px !important;
+  }
+
+  .m-x-#{$distance} {
+    margin-right: $distance + px !important;
+    margin-left: $distance + px !important;
+  }
+
+  .m-t-#{$distance} {
+    margin-top: $distance + px !important;
+  }
+
+  .m-r-#{$distance} {
+    margin-right: $distance + px !important;
+  }
+
+  .m-b-#{$distance} {
+    margin-bottom: $distance + px !important;
+  }
+
+  .m-l-#{$distance} {
+    margin-left: $distance + px !important;
+  }
+
+  .p-#{$distance} {
+    padding: $distance + px !important;
+  }
+
+  .p-y-#{$distance} {
+    padding-top: $distance + px !important;
+    padding-bottom: $distance + px !important;
+  }
+
+  .p-x-#{$distance} {
+    padding-right: $distance + px !important;
+    padding-left: $distance + px !important;
+  }
+
+  .p-t-#{$distance} {
+    padding-top: $distance + px !important;
+  }
+
+  .p-r-#{$distance} {
+    padding-right: $distance + px !important;
+  }
+
+  .p-b-#{$distance} {
+    padding-bottom: $distance + px !important;
+  }
+
+  .p-l-#{$distance} {
+    padding-left: $distance + px !important;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+@each $fsItem in $fonts-list {
+  .fs-#{$fsItem} {
+    font-size: $fsItem;
+  }
+}
+
+/* 常用 flex */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-justify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  content: "";
+}
+
+/* 文字单行省略号 */
+.sle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* 文本溢出时显示省略标记  兼容Safari */
+
+  /* 文本溢出时显示省略标记  兼容Opera */
+  white-space: nowrap;
+}
+
+/* 文字多行省略号 */
+.mle {
+  display: box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 文字多了自動換行 */
+.break-word {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.2s;
+}
+
+.fade-transform-enter-from {
+  opacity: 0;
+  transition: all 0.2s;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transition: all 0.2s;
+  transform: translateX(30px);
+}
+
+/* Breadcrumb */
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all 0.2s ease;
+}
+
+.breadcrumb-enter-from,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+  z-index: -1;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dddee0;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 white;
+  box-shadow: inset 0 0 0 white;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  .text {
+    margin: 30px 0;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(88 88 88);
+  }
+}
